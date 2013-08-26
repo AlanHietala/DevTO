@@ -5,4 +5,11 @@ This is the sample application built during my DevTO presentation. It is split i
 
 The solution branch contains a fully functioning application. This lets anyone interested try to build the same application and be able to switch to a solution branch at any time if they get stuck. 
 
+The application is a simple guest list that lets users:
+
+* Add attendees
+* Search Attendees
+* Check attendees off 
+
+
 
