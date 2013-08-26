@@ -1,0 +1,57 @@
+<!doctype html>
+<head>
+    <title>Who's here?</title>
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="components/angular/angular.js"></script>
+    <script src="scripts/controllers/listctrl.js"></script>
+</head>
+<!-- add ng-app directive to body tag to declare the contents an
+angular application -->
+<body>
+
+<!-- add ng-controller directive to create a controller for the contents
+of the container div -->
+<div class="container">
+    <h1>Who's Here</h1>
+
+    <form class="form-inline">
+        <div class="input-append">
+            <!-- bind the input to a model using ng-model for search -->
+            <input type="text"/>
+            <button class="btn">Search</button>
+        </div>
+    </form>
+    <ul>
+        <!--
+         1. add ng-repeat to the list item and add a filter as well. the filter should use the same
+            model on the scope that is referenced by the ng-model directive on the search input box.
+
+         2. In the controller create an array holding the list items to iterate over
+            on the scope.
+
+         3. use two way databinding via {{  }} to bind to the persons name.
+
+         4. Create a class present-{{ person.present }} on the li that uses databinding to the present property
+
+         5. bind the checkbox to the person.present using ng-model directive.
+        -->
+
+
+        <li>Alan Hietala <input type="checkbox"/></li>
+        <li>Jim Jones <input type="checkbox"/></li>
+        <li>Mary Smith <input type="checkbox"/></li>
+
+    </ul>
+    <form class="form-inline">
+        <div class="input-append">
+            <!-- use the ng-model directive to bind the input to a model called newPerson -->
+            <input type="text"/>
+            <!-- use the ng-click directive to call a function addPerson() that is on the scope
+            in the controller -->
+            <button class="btn btn-primary">Add</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

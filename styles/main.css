@@ -1,0 +1,6 @@
+/* Will be compiled down to a single stylesheet with your sass files */
+
+.present-true {
+    text-decoration: line-through;
+    color:red;
+}

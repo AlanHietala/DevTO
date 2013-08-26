@@ -1,0 +1,10 @@
+<div class="hero-unit">
+    <h2>Whats in the Fridge?</h2>
+  <ul>
+      <li ng-click="thing.haveStock = !thing.haveStock" class="item-{{ thing.haveStock }}" ng-repeat="thing in thingsInFridge">{{thing.item}}</li>
+  </ul>
+  <form>
+      <input ng-model="thingToAdd" type="text"/>
+      <button class="btn" ng-click="addToFridge()">Add</button>
+  </form>
+</div>
