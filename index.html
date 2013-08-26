@@ -8,17 +8,17 @@
 </head>
 <!-- add ng-app directive to body tag to declare the contents an
 angular application -->
-<body>
+<body ng-app>
 
 <!-- add ng-controller directive to create a controller for the contents
 of the container div -->
-<div class="container">
+<div ng-controller="ListCtrl" class="container">
     <h1>Who's Here</h1>
 
     <form class="form-inline">
         <div class="input-append">
             <!-- bind the input to a model using ng-model for search -->
-            <input type="text"/>
+            <input ng-model="searchText" type="text"/>
             <button class="btn">Search</button>
         </div>
     </form>
@@ -38,18 +38,16 @@ of the container div -->
         -->
 
 
-        <li>Alan Hietala <input type="checkbox"/></li>
-        <li>Jim Jones <input type="checkbox"/></li>
-        <li>Mary Smith <input type="checkbox"/></li>
-
+        <li class="present-{{ person.present }}" ng-repeat="person in attendeeList|filter:searchText">{{ person.name }}
+            <input ng-model="person.present" type="checkbox"/></li>
     </ul>
     <form class="form-inline">
         <div class="input-append">
             <!-- use the ng-model directive to bind the input to a model called newPerson -->
-            <input type="text"/>
+            <input ng-model="newPerson" type="text"/>
             <!-- use the ng-click directive to call a function addPerson() that is on the scope
             in the controller -->
-            <button class="btn btn-primary">Add</button>
+            <button ng-click="addPerson()" class="btn btn-primary">Add</button>
         </div>
     </form>
 </div>
